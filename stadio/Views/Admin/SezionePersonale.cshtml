@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "SezionePersonale";
+}
+
+<h2 align="center">Dati personali</h2>
+<hr />
+
+<table style="width:25%" align="center">
+
+    <tr>
+        <td>Nome : </td>
+        <td> @Session["Nome"]</td>
+    </tr>
+
+    <tr>
+        <td>Cognome : </td>
+        <td>@Session["Cognome"]</td>
+    </tr>
+
+    <tr>
+        <td>Data di nascita : </td>
+        <td>@Session["Nascita"]</td>
+    </tr>
+
+    <tr>
+        <td>Sesso : </td>
+        @if (@Session["Sesso"].ToString() == "M")
+        {
+            <td>Maschio</td>
+        }
+        @if (@Session["Sesso"].ToString() == "F")
+        {
+            <td>Femmina</td>
+        }
+    </tr>
+
+    <tr>
+        <td>Id : </td>
+        <td>@Session["Id"]</td>
+    </tr>
+
+    <tr>
+        <td>Livello : </td>
+        @if (@Session["Livello"].ToString() == "User")
+        {
+            <td>Utente</td>
+        }
+        @if (@Session["Livello"].ToString() == "Admin")
+        {
+            <td>Amministrazione</td>
+        }
+    </tr>
+</table>

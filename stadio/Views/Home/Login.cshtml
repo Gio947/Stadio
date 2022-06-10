@@ -1,0 +1,44 @@
+﻿@model stadio.Models.Account
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal" align="center">
+    <h4>Accedi alla tua area riservata</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.password, new { htmlAttributes = new { type = "password", @class = "form-control" } })
+            <input type="checkbox" id="pulsante password" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'">
+            <label for="pulsante password"> mostra </label>
+            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div>
+        <p style="color:red"> @Model.accesso </p>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        <div class="col-md-offset-2 col-md-10" align="center">
+            <input type="submit" value="Accedi" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}

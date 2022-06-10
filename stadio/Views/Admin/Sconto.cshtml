@@ -1,0 +1,79 @@
+﻿@model stadio.Models.Sconto
+
+@{
+    ViewBag.Title = "Sconto";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal" align="center">
+        <h4>Aggiorna valori ed estensione degli sconti</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group" style="width:70%" align="center">
+            @Html.LabelFor(model => model.giovane, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" align="center">
+                @Html.EditorFor(model => model.giovane, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.giovane, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="width:70%" align="center">
+            @Html.LabelFor(model => model.scontoUnder, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" align="center">
+                @Html.EditorFor(model => model.scontoUnder, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.scontoUnder, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="width:70%" align="center">
+            @Html.LabelFor(model => model.scontoDonna, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" align="center">
+                @Html.EditorFor(model => model.scontoDonna, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.scontoDonna, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="width:70%" align="center">
+            @Html.LabelFor(model => model.anziano, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" align="center">
+                @Html.EditorFor(model => model.anziano, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.anziano, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="width:70%" align="center">
+            @Html.LabelFor(model => model.scontoOver, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" align="center">
+                @Html.EditorFor(model => model.scontoOver, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.scontoOver, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="width:70%" align="center">
+            @Html.LabelFor(model => model.inizio, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" align="center">
+                @Html.EditorFor(model => model.inizio, new { htmlAttributes = new { @class = "form-control" } })
+                <font color="red">@Model.message1</font>
+                @Html.ValidationMessageFor(model => model.inizio, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="width:70%" align="center">
+            @Html.LabelFor(model => model.fine, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" align="center">
+                @Html.EditorFor(model => model.fine, new { htmlAttributes = new { @class = "form-control" } })
+                <font color="red">@Model.message2</font>
+                @Html.ValidationMessageFor(model => model.fine, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="width:70%" align="center">
+            <div class="col-md-offset-2 col-md-10" align="center">
+                <input type="submit" value="Aggiorna" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

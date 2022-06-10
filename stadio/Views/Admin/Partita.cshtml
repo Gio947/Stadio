@@ -1,0 +1,97 @@
+﻿@model stadio.Models.Partita
+
+@{
+    ViewBag.Title = "Registrazione partita";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal" align="center">
+    <h4>Registra una nuova partita</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.id)
+    @Html.HiddenFor(model => model.nome)
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.competizione, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.competizione, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.competizione, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.squadra1, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.squadra1, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.squadra1, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.squadra2, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.squadra2, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.squadra2, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.dataInizio, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.dataInizio, new { htmlAttributes = new { @class = "form-control" } })
+            <font color="red">@Model.message</font>
+            @Html.ValidationMessageFor(model => model.dataInizio, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.orainizio, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.orainizio, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.orainizio, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.importoCurvaLocali, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.importoCurvaLocali, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.importoCurvaLocali, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.importoCurvaOspiti, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.importoCurvaOspiti, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.importoCurvaOspiti, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.importoDistinti, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.importoDistinti, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.importoDistinti, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        @Html.LabelFor(model => model.importoLaterali, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10" align="center">
+            @Html.EditorFor(model => model.importoLaterali, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.importoLaterali, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="width:50%" align="center">
+        <div class="col-md-offset-2 col-md-10" align="center">
+            <input type="submit" value="Registra partita" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}

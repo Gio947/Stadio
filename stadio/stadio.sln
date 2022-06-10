@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stadio", "stadio.csproj", "{9F847212-C6C2-4153-8B0D-943466A56C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFStadio", "..\WCFStadio\WCFStadio.csproj", "{BFD19A0C-E540-49C1-A60B-16367D7ABA37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F847212-C6C2-4153-8B0D-943466A56C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F847212-C6C2-4153-8B0D-943466A56C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F847212-C6C2-4153-8B0D-943466A56C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F847212-C6C2-4153-8B0D-943466A56C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD19A0C-E540-49C1-A60B-16367D7ABA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD19A0C-E540-49C1-A60B-16367D7ABA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD19A0C-E540-49C1-A60B-16367D7ABA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD19A0C-E540-49C1-A60B-16367D7ABA37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A01FF72-FCC8-4DA2-B9DA-E80B8400AFDE}
+	EndGlobalSection
+EndGlobal

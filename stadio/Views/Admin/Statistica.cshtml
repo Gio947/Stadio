@@ -1,0 +1,48 @@
+﻿@model stadio.Models.Statistiche
+
+@{
+    ViewBag.Title = "Statistica";
+}
+
+<h2>Statistica</h2>
+
+@if (Model.numBiglietti.ContainsKey("nulla"))
+{
+    <h5>Non sono ancora stati venduti biglietti</h5>
+
+}
+else
+{
+    <table>
+
+        <tr>
+            <th>Numero biglietti per partita</th>
+        </tr>
+
+        @for (int i = 0; i < Model.numBiglietti.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Model.numBiglietti.ElementAt(i).Key
+                    @Model.numBiglietti.ElementAt(i).Value
+
+                    @for (int j = 0; j < 4; j++)
+                    {
+                        @Model.etaUtenti[i * 4 + j].ElementAt(0).Key;
+
+                        @Model.etaUtenti[i * 4 + j].ElementAt(0).Value;
+
+                    }
+
+                </td>
+            </tr>
+        }
+
+    </table>
+
+}
+
+
+
+<br />
+

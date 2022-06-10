@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>
+        Benvenuto
+        @Session["Nome"]
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Compra biglietto</h2>
+        <p>Puoi comprare il biglietto secondo vari criteri , per partita , per posto , per settore e per prezzo</p>
+        <p><a class="btn btn-default" href="https://localhost:44337/User/SceltaPartita">Compra biglietto &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Ricarica conto</h2>
+        <p>Nella sezione 'Ricarica Conto' puoi aggiungere soldi sul tuo conto</p>
+        <p><a class="btn btn-default" href="https://localhost:44337/User/Conto">Ricarica conto &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Sezione personale</h2>
+        <p>In questa sezione puoi trovare i tuoi dati e tutti i tuoi biglietti comprati.</p>
+        <p><a class="btn btn-default" href="https://localhost:44337/User/SezionePersonale">Sezione personale &raquo;</a></p>
+    </div>
+</div>
